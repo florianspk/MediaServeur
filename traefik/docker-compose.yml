@@ -1,0 +1,23 @@
+version: '3.7'
+services:
+  traefik:
+    image: "traefik:v2.2"
+    container_name: "traefik"
+    restart: unless-stopped
+    networks:
+      - traefik_network
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - /home/traefik/traefik.toml:/traefik.toml:ro
+      - /home/traefik/traefik_dynamic.toml:/traefik_dynamic.toml
+      - /home/traefik/acme.json:/acme.json
+      - /home/traefik/log/access.log:/var/log/access.log
+
+
+
+networks:
+  traefik_network:
+    external: true

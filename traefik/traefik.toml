@@ -1,0 +1,43 @@
+debug = true
+logLevel = "DEBUG"
+
+[providers]
+    [providers.file]
+        # Dynamic files
+        filename = "traefik_dynamic.toml"
+        watch = true
+    [providers.docker]
+        endpoint = "unix:///var/run/docker.sock"
+        exposedByDefault = false
+        watch = true
+
+[entryPoints]
+    [entryPoints.web]
+        address = ":80"
+
+    [entryPoints.web.http]
+        [entryPoints.web.http.redirections]
+            [entryPoints.web.http.redirections.entryPoint]
+                to = "websecure"
+                scheme = "https"
+
+    [entryPoints.websecure]
+        address = ":443"
+
+[certificatesResolvers.leresolver.acme]
+  email = "email@gmail.com"
+  storage = "acme.json"
+  [certificatesResolvers.leresolver.acme.httpChallenge]
+    entryPoint = "web"
+
+[api]
+  dashboard = true
+
+
+[global]
+  sendAnonymousUsage = false
+  checkNewVersion = false
+
+[accessLog]
+  filePath = "/var/log/access.log"
+  format = "json"
