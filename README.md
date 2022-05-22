@@ -2,8 +2,6 @@
 
 Date: 22/05/2022
 Date Created: 22 mai 2022 15:01
-Priorité: Important 🔥
-Statut: En cours
 
 <aside>
 ☝ Je vais vous parlez ici de la procédure pour installer une seedbox automatisée, anonyme et sécurisée sur Debian 10 avec l’utilisation de Docker et OpenVPN.
@@ -26,13 +24,13 @@ Votre seedbox sera déployée en quelques minutes ! Docker permet en quelques co
 
 Cette outils vas vous permettre de télécharger des films, séries TV et fichiers audio directement depuis des fichiers .torrent. **Deluge** est donc un client BitTorrent multiplateforme libre basé sur libtorrent. Il est réputé pour sa stabilité, sa vitesse et son côté poids plume et dispose d’une interface claire et intuitive. Enfin il s’avère extrêmement modulable grâce à la possibilité de lui ajouter de nombreux plugins.
 
-![Untitled](/home/florianspk/Personel/ServeurDocker/media/img-readme/Untitled.png)
+![Untitled](https://github.com/florianspk/MediaServeur/blob/5641ac801828db4be254f5adbb8e7b14b8ec32a7/media/img-readme/Untitled.png)
 
 ### Jackett
 
 Cette outil permet de combler ce manque et prend en charge plus d’une centaine de trackers. De nombreux trackers Français (YGGtorrent) sont supportés ainsi que des trackers privés et semi-privés nécessitant un compte. **Jackett** fonctionne comme un serveur proxy, lorsque vous effectuez une recherche via Sonarr ou Radarr, celui-ci transforme et transmet la requête au tracker, analyse la réponse puis renvoie les résultats à l’application émettrice. Jackett prend aussi en charge les flux RSS.
 
-![Untitled](/home/florianspk/Personel/ServeurDocker/media/img-readme/Untitled 1.png)
+![Untitled](https://github.com/florianspk/MediaServeur/blob/5641ac801828db4be254f5adbb8e7b14b8ec32a7/media/img-readme/Untitled%201.png)
 
 ### Sonarr
 
@@ -46,14 +44,14 @@ Ce dernier permet de rechercher vos fichiers *.torrent* et d’automatiser le t�
 
 Traefik est un routeur Edge open-source qui fait de la publication de vos services une expérience amusante et facile. Il reçoit les demandes au nom de votre système et trouve les composants qui sont responsables de leur traitement.
 
-![Untitled](/home/florianspk/Personel/ServeurDocker/media/img-readme/Untitled 2.png)
+![Untitled](https://github.com/florianspk/MediaServeur/blob/5641ac801828db4be254f5adbb8e7b14b8ec32a7/media/img-readme/Untitled%202.png)
 
 ### Jellyfin
 
 Ce dernier est un serveurmultimedia. Il s'agit d'un fork de Emby (anciennement Media Browser)
 devenu officiellement propriétaire en 2018. Il permet de mettre sa médiathèque à disposition sur le web, qu'il s'agisse de contenu vidéo (films et séries, télévision), audio, ou d'images.
 
-![Untitled](/home/florianspk/Personel/ServeurDocker/media/img-readme/Untitled 3.png)
+![Untitled](https://github.com/florianspk/MediaServeur/blob/5641ac801828db4be254f5adbb8e7b14b8ec32a7/media/img-readme/Untitled%203.png)
 
 <aside>
 ☝ Nous allons donc mettre tous ces outils en place pour avoir notre propre serveur de film, série et musique
