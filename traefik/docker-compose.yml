@@ -16,8 +16,6 @@ services:
       - /home/traefik/acme.json:/acme.json
       - /home/traefik/log/access.log:/var/log/access.log
 
-
-
 networks:
   traefik_network:
     external: true
